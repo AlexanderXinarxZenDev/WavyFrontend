@@ -27,7 +27,7 @@ go get github.com/AlexanderXinarxZenDev/flusk/src
 Or if you're using the local development structure:
 
 ```bash
-git clone https://github.com/yourname/flusk
+git clone https://github.com/AlexanderXinarxZenDev/flusk
 cd flusk
 go work init ./src ./examples   # if using go.work
 ```
