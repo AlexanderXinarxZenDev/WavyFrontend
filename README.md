@@ -1,8 +1,8 @@
-# 🔥 Flusk v1.5
+# 🔥 Wavy v1.5
 
 **A minimal Flask‑like web framework in Go** – lightweight, zero dependencies, and dead simple.
 
-Flusk gives you just enough to build HTTP APIs without the clutter. Inspired by Flask's elegance, built with Go's performance.
+Wavy gives you just enough to build HTTP APIs without the clutter. Inspired by Flask's elegance, built with Go's performance.
 
 ---
 
@@ -21,14 +21,14 @@ Flusk gives you just enough to build HTTP APIs without the clutter. Inspired by 
 ## 📦 Installation
 
 ```bash
-go get github.com/AlexanderXinarxZenDev/flusk/src
+go get github.com/AlexanderXinarxZenDev/Wavy/src
 ```
 
 Or if you're using the local development structure:
 
 ```bash
-git clone https://github.com/AlexanderXinarxZenDev/flusk
-cd flusk
+git clone https://github.com/AlexanderXinarxZenDev/Wavy
+cd Wavy
 go work init ./src ./examples   # if using go.work
 ```
 
@@ -39,22 +39,22 @@ go work init ./src ./examples   # if using go.work
 ```go
 package main
 
-import "github.com/yourname/flusk"
+import "github.com/AlexanderXinarxZenDev/Wavy"
 
 func main() {
-    app := flusk.New()
+    app := Wavy.New()
 
-    app.GET("/", func(c *flusk.Context) {
-        c.Text(200, "Hello Flusk v1.5")
+    app.GET("/", func(c *Wavy.Context) {
+        c.Text(200, "Hello Wavy v1.5")
     })
 
-    app.GET("/json", func(c *flusk.Context) {
+    app.GET("/json", func(c *Wavy.Context) {
         c.JSON(200, map[string]string{
             "message": "working",
         })
     })
 
-    app.POST("/submit", func(c *flusk.Context) {
+    app.POST("/submit", func(c *Wavy.Context) {
         c.Text(201, "Created")
     })
 
@@ -66,14 +66,14 @@ Run it:
 
 ```bash
 go run main.go
-# Output: 🚀 Flusk v1.5 running on http://localhost:8080
+# Output: 🚀 Wavy v1.5 running on http://localhost:8080
 ```
 
 Test with `curl`:
 
 ```bash
 curl http://localhost:8080/
-# Hello Flusk v1.5
+# Hello Wavy v1.5
 
 curl http://localhost:8080/json
 # {"message":"working"}
@@ -83,8 +83,8 @@ curl http://localhost:8080/json
 
 ## 📚 API Reference
 
-### `flusk.New() *App`
-Creates a new Flusk application instance.
+### `Wavy.New() *App`
+Creates a new Wavy application instance.
 
 ### `app.GET(path string, handler Handler)`
 Registers a handler for HTTP `GET` requests at the given path.
@@ -109,8 +109,8 @@ Sends a JSON response. Automatically sets `Content-Type: application/json`.
 ## 📁 Project structure
 
 ```
-flusk/
-├── flusk.go        # App core
+Wavy/
+├── Wavy.go        # App core
 ├── router.go       # Simple route map
 ├── context.go      # Request/response wrapper
 ├── server.go       # HTTP server bootstrap
@@ -130,7 +130,7 @@ flusk/
 
 ---
 
-## 🚫 What Flusk is NOT
+## 🚫 What Wavy is NOT
 
 - A full‑featured framework (use Gin, Echo, or Fiber for that)
 - A template engine (use `html/template` directly)
@@ -140,7 +140,7 @@ flusk/
 
 ## 🤝 Contributing
 
-Flusk is intentionally small. If you have an idea that fits the minimalist spirit, open an issue or PR.
+Wavy is intentionally small. If you have an idea that fits the minimalist spirit, open an issue or PR.
 
 Guidelines:
 - Keep it under 400 lines total

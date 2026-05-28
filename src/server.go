@@ -1,4 +1,4 @@
-package flusk
+package Wavy
 
 import (
 	"fmt"
@@ -6,7 +6,7 @@ import (
 )
 
 func RunServer(router *Router, addr string) error {
-	fmt.Printf("🚀 Flusk v1.5 running on http://localhost%s\n", addr)
+	fmt.Printf("🚀 Wavy v1.5 running on http://localhost%s\n", addr)
 	
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		handler, ok := router.Find(r.Method, r.URL.Path)

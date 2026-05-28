@@ -1,5 +1,5 @@
-// flusk/router.go
-package flusk
+// Wavy/router.go
+package Wavy
 
 type Handler func(*Context)
 
