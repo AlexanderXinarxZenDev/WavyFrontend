@@ -1,3 +1,3 @@
-module github.com/AlexanderXinarxZenDev/Wavy
+module github.com/AlexanderXinarxZenDev/WavyFrontend/src
 
 go 1.25.1
