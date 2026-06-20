@@ -1,5 +1,5 @@
 // Wavy/context.go
-package flusk
+package Wavy
 
 import (
 	"encoding/json"
