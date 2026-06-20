@@ -21,13 +21,13 @@ Wavy gives you just enough to build HTTP APIs without the clutter. Inspired by F
 ## 📦 Installation
 
 ```bash
-go get github.com/AlexanderXinarxZenDev/Wavy/src
+go get github.com/AlexanderXinarxZenDev/WavyFrontend/src
 ```
 
 Or if you're using the local development structure:
 
 ```bash
-git clone https://github.com/AlexanderXinarxZenDev/Wavy
+git clone https://github.com/AlexanderXinarxZenDev/WavyFrontend
 cd Wavy
 go work init ./src ./examples   # if using go.work
 ```
@@ -39,7 +39,7 @@ go work init ./src ./examples   # if using go.work
 ```go
 package main
 
-import "github.com/AlexanderXinarxZenDev/Wavy"
+import "github.com/AlexanderXinarxZenDev/WavyFrontend/src"
 
 func main() {
     app := Wavy.New()
@@ -109,7 +109,7 @@ Sends a JSON response. Automatically sets `Content-Type: application/json`.
 ## 📁 Project structure
 
 ```
-Wavy/
+Wavy/src/
 ├── Wavy.go        # App core
 ├── router.go       # Simple route map
 ├── context.go      # Request/response wrapper
